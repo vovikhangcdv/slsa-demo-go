@@ -1,4 +1,4 @@
-# slsa-demo-go
+# SLSA Demo App - Guess Number Game
 
 This is a demo app that applying the [SLSA framework](https://github.com/slsa-framework/slsa) and [Scorecard](https://github.com/ossf/scorecard) - Guess Number Game
 
@@ -6,9 +6,9 @@ This is a demo app that applying the [SLSA framework](https://github.com/slsa-fr
 
 Setup `slsa-goreleaser` configs for multi-platform builds
 
-    ```bash
-    python3 scripts/setup.py
-    ```
+```bash
+python3 scripts/setup.py
+```
 
 ## Release
 
