@@ -1,6 +1,6 @@
 # slsa-demo-go
 
-SLSA applying demo for Go - Guess Number Game
+This is a demo app that applying the [SLSA framework](https://github.com/slsa-framework/slsa) and [Scorecard](https://github.com/ossf/scorecard) - Guess Number Game
 
 ## Setup
 
