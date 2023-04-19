@@ -5,7 +5,7 @@ matrix = {
     "arch": ["amd64", "arm64"]
 }
 
-template = """# Filename: ${{matrix.os}}-${{matrix.arch}}.yml
+template = """# Filename: ${{{{matrix.os}}}}-${{{{matrix.arch}}}}.yml
 # Version for this file.
 version: 1
 
@@ -32,16 +32,16 @@ goarch: {arch}
 # dir: ./relative/path/to/dir
 
 # Binary output name.
-# {{ .Os }} will be replaced by goos field in the config file.
-# {{ .Arch }} will be replaced by goarch field in the config file.
-binary: binary-guess-number-game-{{ .Os }}-{{ .Arch }}
+# {{{{ .Os }}}} will be replaced by goos field in the config file.
+# {{{{ .Arch }}}} will be replaced by goarch field in the config file.
+binary: binary-guess-number-game-{{{{ .Os }}}}-{{{{ .Arch }}}}
 
 # (Optional) ldflags generated dynamically in the workflow, and set as the `evaluated-envs` input variables in the workflow.
 ldflags:
-    - "-X main.Version={{ .Env.VERSION }}"
-    - "-X main.Commit={{ .Env.COMMIT }}"
-    - "-X main.CommitDate={{ .Env.COMMIT_DATE }}"
-    - "-X main.TreeState={{ .Env.TREE_STATE }}" """
+    - "-X main.Version={{{{ .Env.VERSION }}}}"
+    - "-X main.Commit={{{{ .Env.COMMIT }}}}"
+    - "-X main.CommitDate={{{{ .Env.COMMIT_DATE }}}}"
+    - "-X main.TreeState={{{{ .Env.TREE_STATE }}}}" """
 
 output_directory = ".github/slsa-goreleaser-configs"
 
