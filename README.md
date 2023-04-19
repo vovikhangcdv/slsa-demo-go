@@ -1,2 +1,3 @@
 # slsa-demo-go
-SLSA applying demo for Go
+
+SLSA applying demo for Go - Guess Number Game
