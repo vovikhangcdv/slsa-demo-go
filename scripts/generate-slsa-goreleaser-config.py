@@ -37,11 +37,12 @@ goarch: {arch}
 binary: binary-guess-number-game-{{{{ .Os }}}}-{{{{ .Arch }}}}
 
 # (Optional) ldflags generated dynamically in the workflow, and set as the `evaluated-envs` input variables in the workflow.
-ldflags:
-    - "-X main.Version={{{{ .Env.VERSION }}}}"
-    - "-X main.Commit={{{{ .Env.COMMIT }}}}"
-    - "-X main.CommitDate={{{{ .Env.COMMIT_DATE }}}}"
-    - "-X main.TreeState={{{{ .Env.TREE_STATE }}}}" """
+# ldflags:
+#     - "-X main.Version={{{{ .Env.VERSION }}}}"
+#     - "-X main.Commit={{{{ .Env.COMMIT }}}}"
+#     - "-X main.CommitDate={{{{ .Env.COMMIT_DATE }}}}"
+#     - "-X main.TreeState={{{{ .Env.TREE_STATE }}}}" 
+"""
 
 output_directory = ".github/slsa-goreleaser-configs"
 
